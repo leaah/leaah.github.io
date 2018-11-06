@@ -1,0 +1,17 @@
+body {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    padding: 20px;
+}
+
+img {
+    padding-bottom: 20px;
+}
+
+button {
+    padding-bottom: 20px;
+}

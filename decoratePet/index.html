@@ -1,0 +1,50 @@
+<!--
+1. Display an image of an animal on your HTML page
+
+2. You are going to now use JS DOM manipulation do "decorate" that animal. The decoration should be triggered by some type of user event. However you decorate the animal is up to you! You can draw on it, put a hat on it, make it wear makeup, etc.
+
+ 
+
+One idea:
+
+1. When the user moves the mouse, create a new div with a background color, and append it to the page. 
+2. Position it using CSS absolute positioning, according to the user's mouse position.
+3. Bonus: Make it different colors depending where you paint, make it random colors, or add a paint color dropdown selector on the side.
+
+OR:
+
+Include an image of a hat or a moustache or something else silly that your pet might want to wear. Allow the user to click on the animal and have that click move the object to that position on the pet. (Want a hint? Try it first, then scroll down) 
+-->
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Decorate yo animal!</title>
+ </head>
+ <body>
+  
+  <img id = "dog" src ="https://static.boredpanda.com/blog/wp-content/uploads/2017/04/cute-dog-shiba-inu-ryuji-japan-18.jpg" width="500">
+     
+ <img id = "pie" src ="https://www.yogurt-land.com/assets/630.png" width="100">
+  
+
+ <div id = "location"></div>
+
+<script>
+      var empty = document.getElementById("location");
+            var dogPic = document.getElementById("dog");
+            var onDogClick = function(e) {
+            var PiePic = document.getElementById("pie"); 
+             // if the X and Y coordinates are a bit off, you may have to add or subtrack to make it work
+                PiePic.style.top = e.clientY - 10 + "px";
+                PiePic.style.left = e.clientX - 40 + "px";
+                empty.textContent = e.clientY + "px" + e.clientX + "px";
+            };
+         
+            dogPic.addEventListener("click", onDogClick);
+            
+</script>
+     
+ </body>
+</html>
